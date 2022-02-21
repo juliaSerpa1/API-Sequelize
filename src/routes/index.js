@@ -2,8 +2,8 @@ const { Router } = require('express')
 
 const router = Router();
 
-router.get('/', (req,res,next)=>{
-    return res.json('Bem vindo a api!')
-});
+const TaskController = require('../controllers/TaskController')
+
+router.get('/', TaskController.index)
 
 module.exports = router;
